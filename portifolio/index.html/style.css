@@ -1,0 +1,124 @@
+/* Reset Básico de Margens e Fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    color: #333333;
+    line-height: 1.6;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container Principal do Currículo */
+.curriculo {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 750px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-top: 6px solid #6c5ce7;
+}
+
+/* Topo / Cabeçalho */
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+.info-principal h1 {
+    font-size: 2.2rem;
+    color: #2d3748;
+    font-weight: 700;
+}
+
+.cargo {
+    font-size: 1.1rem;
+    color: #6c5ce7;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.foto {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #6c5ce7;
+    background-color: #e2e8f0;
+}
+
+/* Estilo das Seções */
+.secao {
+    margin-bottom: 25px;
+}
+
+.secao h2 {
+    font-size: 1.25rem;
+    color: #2d3748;
+    border-left: 4px solid #6c5ce7;
+    padding-left: 10px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Links e Listas */
+a {
+    color: #948cd6;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #aaa0e7;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+ul li::before {
+    content: "•";
+    color: #9185ef;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* Adaptabilidade para Telas Menores (Celulares) */
+@media (max-width: 600px) {
+    .curriculo {
+        padding: 25px;
+    }
+
+    .topo {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .secao h2 {
+        text-align: left;
+    }
+}
